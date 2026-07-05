@@ -1,9 +1,7 @@
 # Link Vault
 
-A personal, self-hosted link/reference manager. Started as a way to rescue years of
-links shared in a Discord server (VFX/3D/game-dev topics: Houdini, Unreal, ComfyUI, AI
-tools, etc.) into something browsable, taggable, and searchable — styled like a game
-storefront (Steam-like grid of cards with thumbnails).
+A personal, self-hosted link/bookmark manager — browsable, taggable, and searchable,
+styled like a game storefront (Steam-like grid of cards with thumbnails).
 
 ![Link Vault screenshot](webapp/screenshot.png)
 
@@ -34,8 +32,7 @@ dependencies — everything else is plain HTML/CSS/JS with zero build step.
 - Category filter chips (horizontally scrollable, won't blow up the toolbar height no
   matter how many categories you have) + sort by newest/rating/title.
 - Search across title, URL, note, category, and source.
-- Thumbnails: real preview images pulled from the original Discord embeds where
-  available; for YouTube video links, computed automatically from the video ID; for
+- Thumbnails: for YouTube video links, computed automatically from the video ID; for
   anything else, auto-fetched server-side (see below) by scraping the target page's
   `og:image` tag the first time you add it. When no thumbnail can be found at all, the
   card falls back to just the site's favicon shown as a small badge in the same
@@ -73,18 +70,6 @@ check that `python.exe` isn't blocked by Windows Firewall (Settings → Privacy 
 Security → Windows Security → Firewall & network protection → Allow an app; it needs
 an **outbound** rule, not just inbound — inbound-only is a common half-fix).
 
-## Source data / re-importing more Discord history
-
-- `DC/` — the original Discord chat-export HTML files (`DiscordChatExporter` format)
-  that seeded the initial dataset. Not read by the running app at all; kept around only
-  in case more channels get exported later.
-- `scripts/parse_discord.py` — the one-time script that parsed `DC/*.html` into
-  `webapp/seed-data.js`. Re-run it if you drop new export files into `DC/` — note this
-  only regenerates the *seed* file (used on a completely fresh install with no
-  `link-vault-data.json` yet); it does not merge into your live data automatically.
-- Both are safe to delete if you're confident you won't add more Discord exports later
-  — none of the running app's code touches them.
-
 ## Design system ("Chrome Aurora")
 
 The visual design (top bar wordmark/icon, pill-shaped controls, monochrome palette, the
@@ -102,15 +87,12 @@ webapp/
   index.html              - markup
   style.css               - all styling incl. Chrome Aurora design tokens
   app.js                  - all app logic (single IIFE, no build step, no framework)
-  seed-data.js            - generated once from DC/, used only on first-ever run
+  seed-data.js            - initial seed data, used only on first-ever run
   server.py               - local server: static file serving + /api/data (save) +
                             /api/fetch-preview (server-side og:image scraping)
   link-vault-data.json    - the real database (created on first run)
   Start Link Vault.vbs    - recommended launcher, no console window
   start.bat / start_silent.bat / stop.bat  - alternate launch/stop scripts
-DC/                       - original Discord export HTML (source material, unused at runtime)
-scripts/parse_discord.py  - one-time HTML → seed-data.js converter
-Link Vault Design/        - design handoff docs/specs from an earlier design pass
 ```
 
 ## Known limitations
