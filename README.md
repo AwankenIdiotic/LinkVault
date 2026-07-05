@@ -3,7 +3,7 @@
 A personal, self-hosted link/bookmark manager — browsable, taggable, and searchable,
 with a clean grid of thumbnail cards.
 
-![Link Vault screenshot](webapp/screenshot.png)
+![Link Vault screenshot](webapp/screenshot.jpg)
 
 ## How to run it
 
