@@ -5,6 +5,8 @@ links shared in a Discord server (VFX/3D/game-dev topics: Houdini, Unreal, Comfy
 tools, etc.) into something browsable, taggable, and searchable — styled like a game
 storefront (Steam-like grid of cards with thumbnails).
 
+![Link Vault screenshot](webapp/screenshot.png)
+
 ## How to run it
 
 Double-click **`webapp/Start Link Vault.vbs`**. That's it — no console window, no
