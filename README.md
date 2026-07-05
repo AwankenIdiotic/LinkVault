@@ -1,7 +1,7 @@
 # Link Vault
 
 A personal, self-hosted link/bookmark manager — browsable, taggable, and searchable,
-styled like a game storefront (Steam-like grid of cards with thumbnails).
+with a clean grid of thumbnail cards.
 
 ![Link Vault screenshot](webapp/screenshot.png)
 
@@ -25,8 +25,8 @@ dependencies — everything else is plain HTML/CSS/JS with zero build step.
 
 - Add / edit / delete links, each with: title, URL, category (with a custom
   user-assignable color), 1–5 star rating, and a free-text note.
-- Grid view (thumbnail cards, Steam-store-like) or List view (compact rows) — toggle
-  any time, remembers your choice.
+- Grid view (thumbnail cards) or List view (compact rows) — toggle any time, remembers
+  your choice.
 - Card size toggle (S/M/L) and adjustable items-per-page (10/20/50/100/all), both
   remembered across sessions.
 - Category filter chips (horizontally scrollable, won't blow up the toolbar height no
