@@ -5,7 +5,7 @@ with a clean grid of thumbnail cards.
 
 ![Link Vault screenshot](webapp/screenshot.jpg)
 
-![Link Vault screenshot](webapp/Screenshot 2026-07-07 010410.jpg)
+![Link Vault screenshot](webapp/Screenshot2.jpg)
 
 ## How to run it
 
