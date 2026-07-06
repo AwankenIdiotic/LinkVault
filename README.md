@@ -5,6 +5,8 @@ with a clean grid of thumbnail cards.
 
 ![Link Vault screenshot](webapp/screenshot.jpg)
 
+![Link Vault screenshot](webapp/Screenshot 2026-07-07 010410.jpg)
+
 ## How to run it
 
 Double-click **`webapp/Start Link Vault.vbs`**. That's it — no console window, no
